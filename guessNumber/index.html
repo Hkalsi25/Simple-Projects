@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Number Guessing Game</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #74ebd5, #9face6);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    #wrapper {
+      background-color: #ffffffcc;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      width: 320px;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      color: #333;
+    }
+
+    form {
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-size: 1.1rem;
+      display: block;
+      margin-bottom: 10px;
+      color: #444;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      font-size: 1rem;
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 15px;
+    }
+
+    .guessSubmit {
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      background-color: #4caf50;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .guessSubmit:hover {
+      background-color: #45a049;
+    }
+
+    .resultParas {
+      margin-top: 20px;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .guesses,
+    .lastResult,
+    .lowOrHi {
+      margin: 10px 0;
+    }
+
+    .lowOrHi h1 {
+      font-size: 1.2rem;
+      color: #444;
+      margin: 10px 0;
+    }
+
+    .button h2 {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #2196f3;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .button h2:hover {
+      background-color: #0b7dda;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <form>
+      <label for="guessField" id="guess">Enter a guess: </label>
+      <input type="text" id="guessField" class="guessField" />
+      <input type="submit" id="submit" value="Submit guess" class="guessSubmit" />
+    </form>
+    <div class="resultParas">
+      <p class="guesses">Previous guesses:</p>
+      <p class="lastResult">10</p>
+      <p class="lowOrHi"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
